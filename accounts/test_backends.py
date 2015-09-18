@@ -84,6 +84,10 @@ class TestBackend(TestCase):
         result_user = self.dummy_backend.get_user(self.user.id)
         self.assertEqual(result_user.id, self.user.id)
 
+    def test_fail_get_user(self):
+        result_user = self.dummy_backend.get_user(-1)
+        self.assertEqual(result_user, None)
+
     def test_case_insensitive_email(self):
         result_user = self.dummy_backend._lookup_user(self.email.upper())
         self.assertEqual(result_user.id, self.user.id)
