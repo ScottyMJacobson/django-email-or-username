@@ -52,6 +52,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend',
+                            'accounts.backends.EmailOrUsernameAuthBackend', ]
+
 ROOT_URLCONF = 'django_email_or_username.urls'
 
 TEMPLATES = [
