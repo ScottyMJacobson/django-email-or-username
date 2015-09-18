@@ -28,8 +28,8 @@ class EmailOrUsernameAuthBackend():
                 user = User.objects.get(username__iexact=username_or_email)
         except User.DoesNotExist:
             return None
-
-        return user
+        else:
+            return user
 
     def authenticate(self, username=None, password=None):
         """
