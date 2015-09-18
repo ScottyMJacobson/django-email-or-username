@@ -1,4 +1,4 @@
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, backends
 from django.conf import settings
 from django.contrib.auth.models import check_password
 from django.core.validators import validate_email
@@ -6,7 +6,7 @@ from django.forms import ValidationError
 
 User = get_user_model()
 
-class EmailOrUsernameAuthBackend():
+class EmailOrUsernameAuthBackend(backends.ModelBackend):
     """
     A custom authentication backend. Allows users to log in using their email address or username.
     """
