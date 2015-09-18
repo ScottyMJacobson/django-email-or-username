@@ -64,6 +64,10 @@ class TestBackend(TestCase):
         result_user = self.dummy_backend._lookup_user("")
         self.assertEqual(result_user, None)
 
+    def test_fail_lookup_by_partial_username(self):
+        result_user = self.dummy_backend._lookup_user(self.username[0:-1])
+        self.assertEqual(result_user, None)
+
     def test_lookup_by_email(self):
         result_user = self.dummy_backend._lookup_user(self.email)
         self.assertEqual(result_user.id, self.user.id)
