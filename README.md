@@ -5,6 +5,7 @@ Example implementation of a django app with a custom auth backend that allows yo
 Compatible with Django >= 1.8
 
 [![Build Status](https://travis-ci.org/ScottyMJacobson/django-email-or-username.svg?branch=master)](https://travis-ci.org/ScottyMJacobson/django-email-or-username)
+[![Coverage Status](https://coveralls.io/repos/ScottyMJacobson/django-email-or-username/badge.svg?branch=master&service=github)](https://coveralls.io/github/ScottyMJacobson/django-email-or-username?branch=master)
 
 ## The Code:
 
