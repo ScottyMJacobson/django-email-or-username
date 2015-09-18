@@ -4,6 +4,8 @@ Example implementation of a django app with a custom auth backend that allows yo
 
 Compatible with Django >= 1.8
 
+[![Build Status](https://travis-ci.org/ScottyMJacobson/django-email-or-username.svg?branch=master)](https://travis-ci.org/ScottyMJacobson/django-email-or-username)
+
 ## The Code:
 
 The "magic" (if you can call it that) happens in the `_lookup_user` method, called by `authenticate`.
