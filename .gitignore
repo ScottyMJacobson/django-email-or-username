@@ -1,2 +1,6 @@
 env/
 *.pyc
+.tox/
+MANIFEST
+.coverage
+*.log
