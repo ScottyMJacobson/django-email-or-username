@@ -2,7 +2,11 @@ language: python
 python:
   - "2.7"
 install:
-  - pip install -r requirements.txt
+  - pip install tox coveralls
+env:
+  - TOX_ENV=tests
 script:
-  - ./manage.py test
+  - tox -e $TOX_ENV
+after_success:
+  - coveralls
 
