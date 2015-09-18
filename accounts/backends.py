@@ -14,10 +14,11 @@ class EmailOrUsernameAuthBackend():
     def _lookup_user(self, username_or_email):
         try:
             validate_email(username_or_email)
-                # Looks like an email. 
         except ValidationError:
+            # not an email
             using_email = False
         else:
+            # looks like an email!
             using_email = True
         
         try:
